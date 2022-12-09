@@ -28,7 +28,8 @@ def main():
     )
     print(
         "Part 2:",
-        "".join([line[-1] for line in move_crates(False, copy.deepcopy(crates), instructions)]),)
+        "".join([line[-1] for line in move_crates(False, copy.deepcopy(crates), instructions)]),
+    )
 
 
 def move_crates(switch: bool, muh_crates: list, instructions: list):
