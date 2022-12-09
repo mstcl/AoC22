@@ -24,22 +24,11 @@ def main():
     crates = [[sl for sl in line if sl.strip()] for line in crates]
     print(
         "Part 1:",
-        "".join(
-            [
-                line[-1]
-                for line in move_crates(True, copy.deepcopy(crates), instructions)
-            ]
-        ),
+        "".join([line[-1] for line in move_crates(True, copy.deepcopy(crates), instructions)]),
     )
     print(
         "Part 2:",
-        "".join(
-            [
-                line[-1]
-                for line in move_crates(False, copy.deepcopy(crates), instructions)
-            ]
-        ),
-    )
+        "".join([line[-1] for line in move_crates(False, copy.deepcopy(crates), instructions)]),)
 
 
 def move_crates(switch: bool, muh_crates: list, instructions: list):
