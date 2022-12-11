@@ -30,18 +30,11 @@ def main():
                         break
 
     count_things(data, False)
-    transposed_data = np.array(data).T.tolist()
-    count_things(transposed_data, True)
+    count_things(np.array(data).T.tolist(), True)
     for val in track.values():
-        if val < 4:
-            ct += 1
-    best = 0
-    for val in score.values():
-        num = np.prod(val)
-        if num > best:
-            best = num
+        ct += (val < 4)
     print("Part 1:", ct)
-    print("Part 2:", best)
+    print("Part 2:", np.max(np.array([np.prod(val) for val in score.values()])))
 
 
 if __name__ == "__main__":
