@@ -11,9 +11,7 @@ def main():
     instructions = []
     for idx, line in enumerate(data):
         if line == "":
-            instructions = [
-                list(map(int, sl.split(" ")[1::2])) for sl in data[idx + 1 :]
-            ]
+            instructions = [list(map(int, sl.split(" ")[1::2])) for sl in data[idx + 1 :]]
             break
         crates.append(line)
     crates = crates[:-1][::-1]
